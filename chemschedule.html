@@ -27,10 +27,10 @@
 		
 	</div>
 	<div id="footer-bar" class="footer-bar-1">
-		<a href="#" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
-		<a href="chemschedule.html"><i class="fa-solid fa-calendar-days"></i><span>Schedule</span></a>
-		<a href="cheminfo.html"><i class="fa-solid fa-circle-info"></i><span>Class Info</span></a>
-		<a href="chemhandouts.html"><i class="fa-regular fa-file-lines"></i><span>Handouts</span></a>
+		<a href="chemhome.html"><i class="fa fa-home"></i><span>Home</span></a>
+		<a href="#" class="active-nav"><i class="fa-solid fa-calendar-days"></i><span>Schedule</span></a>
+		<a href="index-pages.html"><i class="fa-solid fa-circle-info"></i><span>Class Info</span></a>
+		<a href="index-search.html"><i class="fa-regular fa-file-lines"></i><span>Handouts</span></a>
 		
 	</div>
 
@@ -44,36 +44,36 @@
         </div>
 		<div class="card card-style">
 			<div class="content">
-				<div class="row g-0">
-					<div class="col-md">
-						<img src="#" >
-					</div>
-					<div class="col-md text-center">
-						<div class="card-body">
-							<h1 class="card-title">WELCOME CLASS OF 2022-2023
-							</h1>
-							<p class="card-text">Welcome Scientists to our Chemistry Class Web Page! You are going to be using this page alot so make sure to bookmark it. I am very excited to have all of you in my classroom as we embark on this journey together called Chemistry. We are all going to work together, learn together, and grow together. I hope that you are equally as excited to learn about chemistry as I am to teach it. Use the tabs below to view our schedule, policies and handouts.</p>
-						</div>
-					</div>
-				</div>
+				<h2 class="text-center">
+					Course Outline
+				</h2>
+                <p>
+                    The purpose of this class is to examine the concepts and ideas of chemistry. It requires the use of many mathematical techniques and applications of technology as they relate to laboratory skills and data acquisition. Many current research areas will be emphasized to provide a background necessary for student research. The major difference between this class and the regular chemistry course is the level of research that is expected of students and the mathematical detail that is used in the course.
+                </p>
+				<h2 class="text-center">
+					Below is the schedule we will follow for the course
+				</h2>
+                <p>
+                    <strong>Note:</strong> This schedule is not set in stone. Stuff happens and some things may change, be we will do our best to stick to this schedule
+                </p>
 			</div>
 		</div>
-		<div class="card card-style">
-			<div class="content">
-				<div class="row g-0">					
-					<div class="col-md text-center">
-						<div class="card-body">
-							<h1 class="card-title">WELCOME CLASS OF 2022-2023
-							</h1>
-							<p class="card-text">Welcome Scientists to our Chemistry Class Web Page! You are going to be using this page alot so make sure to bookmark it. I am very excited to have all of you in my classroom as we embark on this journey together called Chemistry. We are all going to work together, learn together, and grow together. I hope that you are equally as excited to learn about chemistry as I am to teach it. Use the tabs below to view our schedule, policies and handouts.</p>
-						</div>
-					</div>
-					<div class="col-md">
-						<img src="#" >
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="card card-style bg-theme pb-0">
+            <div class="content" id="tab-group-1">
+                <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-highlight">
+                    <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#tab-1">Spring</a>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-2">Fall</a>
+                </div>
+                <div class="clearfix mb-3"></div>
+                <div data-bs-parent="#tab-group-1" class="collapse show" id="tab-1">
+					<div data-include="spring-schedule.html"></div>
+            
+                </div>
+                <div data-bs-parent="#tab-group-1" class="collapse" id="tab-2">
+					<div data-include="fall-schedule.html"></div>
+                </div>
+            </div>
+        </div>  
 		<div class="footer card card-style">
             <h1 class="footer-title"><span class="color-highlight">Quick Links</span></h1>
             <p class="footer-text">Here are some links that may be useful throughout the year!</p>
@@ -145,5 +145,6 @@
 </div>
 
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/import.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 </body>
