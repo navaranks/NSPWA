@@ -6936,7 +6936,7 @@ input[type=number] {
 	transition: border 0.3s;
 }
 
-.hero-image-chem{
+.hero-image-chem {
   height: 300px;
   background-image: url(/images/cbanner.png);
   background-position: center;
@@ -6945,6 +6945,27 @@ input[type=number] {
   position: relative;
 }
 
+div.classinfo {
+  text-align: center;
+}
+
+ul.classinfo {
+  display: inline-block;
+  text-align: left;
+}
+
+ul.drop {
+  color: #6c6c6c !important;
+  
+}
+.customlink a{ 
+  color: #DA4453 !important;
+}
+
+.customlink a:hover {
+  color: #5D9CEC !important;
+  text-decoration: underline wavy #5D9CEC 1px !important;
+}
 @media (max-width: 768px) {
   .img-hero {
     max-width: 80%;
