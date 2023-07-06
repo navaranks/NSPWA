@@ -6936,13 +6936,16 @@ input[type=number] {
 	transition: border 0.3s;
 }
 
-.hero-image-chem {
-  height: 300px;
-  background-image: url(/images/cbanner.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.chem-header {
+  overflow: hidden;
+}
+img.chem-card {
   position: relative;
+  top: 0%;
+  left: 50%;
+  transform: translate(-49.2%,1.2%);
+  height: 300px;
+  
 }
 
 div.classinfo {
