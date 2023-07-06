@@ -1438,7 +1438,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         //Import HTML Files
-        /*window.onload = function() {
+        window.onload = function() {
             var elements = document.getElementsByTagName('*'),
                 i;
             for (i in elements) {
@@ -1493,7 +1493,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                 }
             }
-        } */
+        } 
     }
 
     //Fix Scroll for AJAX pages.
