@@ -6,32 +6,31 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
 <title>StickyMobile BootStrap</title>
-<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/styles/style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="/fonts/css/fontawesome-all.min.css">
 <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
 <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
-<script type="text/javascript" src="scripts/import.js"></script>
 </head>
 
-<body class="theme-light" data-highlight="highlight-red" data-gradient="body-default">
+<body class="theme-light" data-highlight="highlight-blue" data-gradient="body-default">
 
 <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
 
 <div id="page">
 
 	<!-- header and footer bar go here-->
-	<div class="header header-logo-center gradient-red">
+	<div class="header header-logo-center gradient-blue">
 		<a href="index.html" class="header-title color-white">Navarrete Science</a>
 		<a href="#" data-menu="menu-sidebar-right-1" class="header-icon color-white header-icon-4"><i class="fas fa-bars"></i></a>
 		
 	</div>
 	<div id="footer-bar" class="footer-bar-1">
-		<a href="chemhome.html"><i class="fa fa-home"></i><span>Home</span></a>
-		<a href="chemschedule.html" class="active-nav"><i class="fa-solid fa-calendar-days"></i><span>Schedule</span></a>
-		<a href="cheminfo.html"><i class="fa-solid fa-circle-info"></i><span>Class Info</span></a>
-		<a href="chemhandouts.html"><i class="fa-regular fa-file-lines"></i><span>Handouts</span></a>
+		<a href="physics-home.html" ><i class="fa fa-home"></i><span>Home</span></a>
+		<a href="physics-schedule.html" class="active-nav"><i class="fa-solid fa-calendar-days"></i><span>Schedule</span></a>
+		<a href="physics-info.html"><i class="fa-solid fa-circle-info"></i><span>Class Info</span></a>
+		<a href="physics-handouts.html"><i class="fa-regular fa-file-lines"></i><span>Handouts</span></a>
 		
 	</div>
 
@@ -39,9 +38,9 @@
 	<div class="page-content header-clear-medium">
 		
 		<div class="card card-style shadow-bg shadow-bg-l">
-            <div class="content">
-                <div class="hero-image-chem"></div>
-            </div>
+			<div class="content chem-header">
+				<img src="/images/pbanner.png" class="chem-card" alt="">
+			</div> 
         </div>
 		<div class="card card-style">
 			<div class="content">
@@ -68,12 +67,12 @@
                 <div class="clearfix mb-3"></div>
                 <div data-bs-parent="#tab-group-1" class="collapse show" id="tab-1">
 					<div>
-						<div data-include="spring-schedule.html"></div>
+						<div data-include="h-chem-schedule/chem-spring-schedule.html"></div>
 					</div>
                 </div>
                 <div data-bs-parent="#tab-group-1" class="collapse" id="tab-2">
 					<div>
-						<div data-include="fall-schedule.html"></div>
+						<div data-include="h-chem-schedule/chem-fall-schedule.html"></div>
 					</div>
                 </div>
             </div>
@@ -90,22 +89,22 @@
 					<div class="content my-0">
 						<h5 class="font-700 text-uppercase opacity-40 font-12 pt-2 mb-0">Navigation</h5>
 						<div class="list-group list-custom-small list-icon-0">
-							<a href="index.html">
+							<a href="/index.html">
 								<i class="fa-solid fa-house gradient-dark rounded-sm color-white"></i>
 								<span>Home</span>
 								<i class="fa fa-angle-right"></i>
 							</a>
-							<a href="chemhome.html">
+							<a href="chem-home.html">
 								<i class="fa-solid fa-flask gradient-red rounded-sm color-white"></i>
 								<span>Chemistry</span>
 								<i class="fa fa-angle-right"></i>
 							</a>
-							<a href="#">
+							<a href="/html/physics/physics-home.html">
 								<i class="fa-solid fa-shuttle-space fa-rotate-270 gradient-blue rounded-sm color-white"></i>
 								<span>Physics</span>
 								<i class="fa fa-angle-right"></i>
 							</a>
-							<a href="#">
+							<a href="/html/about-me/about-me-home.html">
 								<i class="fa-solid fa-chalkboard-teacher gradient-magenta rounded-sm color-white"></i>
 								<span>About Me</span>
 								<i class="fa fa-angle-right"></i>
@@ -134,6 +133,6 @@
 		</div>
 </div>
 
-<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/scripts/custom.js"></script>
 </body>
