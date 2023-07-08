@@ -1618,7 +1618,7 @@ button {
 }
 
 .btn.accordion-btn {
-  text-align: left !important;
+  text-align: center !important;
   padding: 15px 17px;
   font-size: 13px;
   font-weight: 700;
@@ -6935,7 +6935,13 @@ input[type=number] {
   border: 2px solid	transparent;
 	transition: border 0.3s;
 }
-
+.img-intro {
+  width: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 .chem-header {
   overflow: hidden;
 }
@@ -6969,8 +6975,48 @@ ul.drop {
   color: #5D9CEC !important;
   text-decoration: underline wavy #5D9CEC 1px !important;
 }
+
 @media (max-width: 768px) {
   .img-hero {
     max-width: 80%;
   }
 } 
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	#Schedule table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#Schedule thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	#Schedule tr { border: 1px solid #ccc; }
+
+	#Schedule td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		white-space: normal;
+		text-align: left;
+
+	}
+
+	#Schedule td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-align: left;
+	}
+
+}
