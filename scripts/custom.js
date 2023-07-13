@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isAJAX = false; // AJAX transitions. Requires local server or server
     var pwaName = "Sticky"; //Local Storage Names for PWA
     var pwaRemind = 1; //Days to re-remind to add to home
-    var pwaNoCache = false; //Requires server and HTTPS/SSL. Will clear cache with each visit
+    var pwaNoCache = true; //Requires server and HTTPS/SSL. Will clear cache with each visit
 
     //Setting Service Worker Locations scope = folder | location = service worker js location
     var pwaScope = "/";
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loadHighlight.href = '../../styles/highlights/highlight_' + highlight +'.css';
             document.getElementsByTagName("head")[0].appendChild(loadHighlight);
             document.body.setAttribute('data-highlight', 'highlight-'+highlight)
-            localStorage.setItem(pwaName+'-Highlight', highlight)
+            
         }))
         var rememberHighlight = localStorage.getItem(pwaName+'-Highlight');
         if(rememberHighlight){
@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!document.querySelectorAll('.page-highlight').length){
                 document.getElementsByTagName("head")[0].appendChild(loadHighlight);
                 document.body.setAttribute('data-highlight', 'highlight-'+defaultHighlight[1])
-                localStorage.setItem(pwaName+'-Highlight', defaultHighlight[1])
+                
             }
         }
 
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         //Activating Dark Mode
-        const darkModeSwitch = document.querySelectorAll('[data-toggle-theme]')
+        const darkModeSwitch = document.querySelectorAll('[data-toggle-theme]');
         darkModeSwitch.forEach(el => el.addEventListener('click',e =>{
             if(document.body.className == "theme-light"){ removeTransitions(); activateDarkMode();}
             else if(document.body.className == "theme-dark"){ removeTransitions(); activateLightMode();}
@@ -1437,6 +1437,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
+        /**
+ * Make <picture> <source> elements with media="(prefers-color-scheme:)"
+ * respect custom theme preference overrides.
+ * Otherwise the `media` preference will only respond to the OS-level setting
+ */
+const updateSourceMedia = colorPreference => {
+  const pictures = document.querySelectorAll("picture")
+
+  pictures.forEach(picture => {
+    const sources = picture.querySelectorAll(`
+        source[media*="prefers-color-scheme"], 
+        source[data-media*="prefers-color-scheme"]
+      `)
+
+    sources.forEach(source => {
+      // Preserve the source `media` as a data-attribute
+      // to be able to switch between preferences
+      if (source?.media.includes("prefers-color-scheme")) {
+        source.dataset.media = source.media
+      }
+
+      // If the source element `media` target is the `preference`,
+      // override it to 'all' to show
+      // or set it to 'none' to hide
+      if (source?.dataset.media.includes(colorPreference)) {
+        source.media = "all"
+      } else if (source) {
+        source.media = "none"
+      }
+    })
+  })
+}
         //Import HTML Files
         window.onload = function() {
             var elements = document.getElementsByTagName('*'),
@@ -1494,6 +1526,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         } 
+        
     }
 
     //Fix Scroll for AJAX pages.

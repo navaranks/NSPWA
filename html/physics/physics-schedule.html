@@ -5,13 +5,14 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>StickyMobile BootStrap</title>
+<title>Physics Schedule</title>
 <link rel="stylesheet" type="text/css" href="../../styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../../styles/style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../../fonts/css/fontawesome-all.min.css">
-<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
-<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+<link rel="manifest" href="../../_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="../../app/icons/icon-192x192.png">
+<link rel="icon" href="../../images/icon.png" type="image/png" sizes="32x32">
 </head>
 
 <body class="theme-light" data-highlight="highlight-blue" data-gradient="body-default">
@@ -39,7 +40,12 @@
 		
 		<div class="card card-style shadow-bg shadow-bg-l">
 			<div class="content chem-header">
-				<img src="../../images/pbanner.png" class="chem-card" alt="">
+				<picture>
+					<source srcset="../../images/pbanner-dark.png" media="(prefers-color-scheme: dark)">
+					<source srcset="../../images/pbanner.png" media="(prefers-color-scheme: light)">
+					<img src="../../images/pbanner.png" class="chem-card" id="screenshot" loading="lazy">
+				</picture>
+				
 			</div> 
         </div>
 		<div class="card card-style">
@@ -61,18 +67,18 @@
 		<div class="card card-style bg-theme pb-0">
             <div class="content" id="tab-group-1">
                 <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-highlight">
-                    <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#tab-1">Spring</a>
-                    <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-2">Fall</a>
+                    <a href="#" class="no-click" data-bs-toggle="collapse" data-bs-target="#tab-1">Spring</a>
+                    <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#tab-2">Fall</a>
                 </div>
                 <div class="clearfix mb-3"></div>
-                <div data-bs-parent="#tab-group-1" class="collapse show" id="tab-1">
+                <div data-bs-parent="#tab-group-1" class="collapse" id="tab-1">
 					<div>
-						<div data-include="h-chem-schedule/chem-spring-schedule.html"></div>
+						<div data-include="h-physics-schedule/h-phys-spring-schedule.html"></div>
 					</div>
                 </div>
-                <div data-bs-parent="#tab-group-1" class="collapse" id="tab-2">
+                <div data-bs-parent="#tab-group-1" class="collapse show" id="tab-2">
 					<div>
-						<div data-include="h-chem-schedule/chem-fall-schedule.html"></div>
+						<div data-include="h-physics-schedule/h-phys-fall-schedule.html"></div>
 					</div>
                 </div>
             </div>
