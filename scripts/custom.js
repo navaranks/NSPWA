@@ -1337,7 +1337,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Externally loading Javascript files for better performance.
 
         var plugIdent, plugClass, plugMain, plugCall;
-        var plugLoc = "plugins/"
+        var plugLoc = "../../plugins/"
 
         let plugins = [
           {
