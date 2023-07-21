@@ -5090,6 +5090,7 @@ input[type=number] {
 .theme-dark table,
 .theme-dark td {
   background-color: #1b1d21 !important;
+  color: #FFF;
 }
 
 .theme-dark,
@@ -6849,47 +6850,87 @@ ul.drop {
   text-decoration: underline wavy #DA4453 1px !important;
 }
 
+.schedule.chem a {
+  color: #DA4453 !important;
+}
+
+.schedule.chem a:hover {
+  color: #5D9CEC !important;
+  text-decoration: underline wavy #5D9CEC 1px !important;
+}
+
+.schedule.phys a {
+  color: #5D9CEC !important;
+}
+
+.schedule.phys a:hover {
+  color: #DA4453 !important;
+  text-decoration: underline wavy #DA4453 1px !important;
+}
+
+.handouts.chem .nav-link {
+  color: #DA4453;
+}
+
+.handouts.chem button:hover {
+  color: #fff;
+  background-color: #5D9CEC;
+}
+
+.handouts.chem .nav-link.active {
+  color: #fff;
+  background-color: #DA4453;
+}
+
+.handouts.chem a {
+  color: #DA4453 ;
+}
+
+.handouts.chem a:hover {
+  color: #5D9CEC ;
+  text-decoration: underline wavy #5D9CEC 1px !important;
+}
+
+.handouts.phys .nav-link {
+  color: #4a89dc;
+}
+
+.handouts.phys button:hover {
+  color: #fff;
+  background-color: #DA4453;
+}
+
+.handouts.phys .nav-link.active {
+  color: #fff;
+  background-color: #4a89dc;
+}
+
+.handouts.phys a {
+  color: #5D9CEC ;
+}
+
+.handouts.phys a:hover {
+  color: #DA4453 ;
+  text-decoration: underline wavy #DA4453 1px !important;
+}
+
 @media (max-width: 768px) {
   .img-hero {
     max-width: 80%;
   }
-} 
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	/* Force table to not be like tables anymore */
-	#Schedule table, thead, tbody, th, td, tr {
+  .schedule table tbody td tr {
 		display: block;
 	}
+  
+  .schedule thead th {
+    display: none;
+  }
 
-	/* Hide table headers (but not display: none;, for accessibility) */
-	#Schedule thead tr {
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
+  .schedule.chem tr {
+    border: 2px solid #da4453 !important;
+  }
+  .schedule.phys tr {
+    border: 2px solid #5D9CEC !important;
+  }
+} 
 
-	#Schedule tr { border: 1px solid #ccc; }
-
-	#Schedule td {
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee;
-		position: relative;
-		white-space: normal;
-		text-align: left;
-
-	}
-
-	#Schedule td:before {
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%;
-		padding-right: 10px;
-		white-space: nowrap;
-		text-align: left;
-	}
-
-}
