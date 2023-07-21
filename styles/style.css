@@ -6918,7 +6918,7 @@ ul.drop {
   .img-hero {
     max-width: 80%;
   }
-  .schedule table tbody td tr {
+  .schedule  tr td {
 		display: block;
 	}
   
