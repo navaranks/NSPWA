@@ -6810,8 +6810,15 @@ img.phys-card {
   height: 300px;
 }
 .card-polaroid-1 {
+  flex-grow: 1 1 auto;
   width: 100%;
-  max-width: 484px;
+}
+.card-style.card-pol {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+ 
 }
 .card-polaroid-2 {
   width: 100%;
@@ -6957,4 +6964,5 @@ ul.drop {
     max-height: 150px;
   }
 } 
+
 
