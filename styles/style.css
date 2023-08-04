@@ -5196,6 +5196,7 @@ input[type=number] {
 }
 
 .theme-dark .divider,
+.theme-dark .divider-phys,
 .theme-dark .menu .nav a:hover,
 .theme-dark .menu .nav .active-subnav,
 .theme-dark .menu .nav .divider {
@@ -6789,6 +6790,7 @@ input[type=number] {
 }
 .chem-header {
   overflow: hidden;
+  max-height: 300px;
 }
 .icon-images {
   width: 30%;
@@ -6797,9 +6799,15 @@ img.chem-card {
   position: relative;
   top: 0%;
   left: 50%;
-  transform: translate(-49.2%,1.2%);
+  transform: translate(-49.5%,0%);
   height: 300px;
-  
+}
+img.phys-card {
+  position: relative;
+  top: 0%;
+  left: 50%;
+  transform: translate(-49.5%,0%);
+  height: 300px;
 }
 .card-polaroid-1 {
   width: 100%;
@@ -6913,7 +6921,19 @@ ul.drop {
   color: #DA4453 ;
   text-decoration: underline wavy #DA4453 1px !important;
 }
-
+.divider-phys {
+  height: 5px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+/*
+.nava-logo {
+  max-height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+*/
 @media (max-width: 768px) {
   .img-hero {
     max-width: 80%;
@@ -6931,6 +6951,10 @@ ul.drop {
   }
   .schedule.phys tr {
     border: 2px solid #5D9CEC !important;
+  }
+  .chem-header img.chem-card,
+  .chem-header img.phys-card {
+    max-height: 150px;
   }
 } 
 
