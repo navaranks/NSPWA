@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>Physics Home</title>
+<link rel="stylesheet" type="text/css" href="../../styles/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../styles/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../fonts/css/fontawesome-all.min.css">
+<link rel="manifest" href="../../_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="../../app/icons/icon-192x192.png">
+<link rel="icon" href="../../images/icon.png" type="image/png" sizes="32x32">
+<script>
+    // Define an array of valid names
+    const validNames = ['Navarrete',]; // Add more names as needed
+  </script>
+</head>
+
+<body class="theme-light" data-highlight="highlight-sunny" data-gradient="body-default">
+
+<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+
+<div id="page">
+
+	<!-- header and footer bar go here-->
+	<div class="header header-logo-center gradient-sunny">
+		<a href="/" class="header-title color-white">Navarrete Science</a>
+		<a href="#" data-menu="menu-sidebar-right-1" class="header-icon color-white header-icon-4"><i class="fas fa-bars"></i></a>
+        <a href="#" data-back-button class="header-icon header-icon-1"><i class="font-14 fa fa-arrow-left color-white"></i></a>
+		
+	</div>
+
+	<!--start of page content, add your stuff here-->
+	<div class="page-content header-clear-medium">
+	<!--
+		<div class="card card-style shadow-bg shadow-bg-l">
+			<div class="content chem-header">
+				<img src="../../images/pbanner.png" class="chem-card show-on-theme-light" alt="">
+				<img src="../../images/pbanner-dark.png" class="chem-card show-on-theme-dark" alt="">
+			</div> 
+        </div>
+    -->
+    <div class="card card-style preload-img" data-src="images/pictures/18w.jpg" data-card-height="130">
+        <div class="card-center ms-3">
+            <h1 class="color-white mb-0">Morning Pass</h1>
+            
+        </div>
+        <div class="card-center me-3">
+            <a href="#" data-menu="menu-wizard-step-1" class="btn btn-m float-end rounded-xl shadow-xl text-uppercase font-800 bg-highlight">Generate</a>
+        </div>
+        <div class="card-overlay bg-black opacity-80"></div>
+    </div>
+	</div>
+
+	<!--end of page content, off canvas elements ( menus / action sheets / modals / toasts / snackbars here-->
+	
+
+	<!-- All Menus, Action Sheets, Modals, Notifications, Toasts get Placed outside the <div class="page-content"> -->
+		<div id="menu-sidebar-right-1" class="menu menu-box-right menu-box-detached menu-sidebar" data-menu-width="310">
+			<div class="sidebar-content">
+				<div class="card card-style my-3">
+					<div class="content my-0">
+						<h5 class="font-700 text-uppercase opacity-40 font-12 pt-2 mb-0">Navigation</h5>
+						<div class="list-group list-custom-small list-icon-0">
+							<a href="/">
+								<i class="fa-solid fa-house gradient-dark rounded-sm color-white"></i>
+								<span>Home</span>
+								<i class="fa fa-angle-right"></i>
+							</a>
+							<a href="../chemistry/chem-home">
+								<i class="fa-solid fa-flask gradient-red rounded-sm color-white"></i>
+								<span>Chemistry</span>
+								<i class="fa fa-angle-right"></i>
+							</a>
+							<a href="physics-home">
+								<i class="fa-solid fa-shuttle-space fa-rotate-270 gradient-blue rounded-sm color-white"></i>
+								<span>Physics</span>
+								<i class="fa fa-angle-right"></i>
+							</a>
+							<a href="../about-me/about-me-home">
+								<i class="fa-solid fa-chalkboard-teacher gradient-magenta rounded-sm color-white"></i>
+								<span>About Me</span>
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="position-sticky w-100 bottom-0 end-0 pb-1">
+				<div class="card card-style mb-3">
+					<div class="content my-0 py-">
+						<div class="list-group list-custom-small list-icon-0">
+							<a href="#" data-toggle-theme data-trigger-switch="switch-dark2-mode" class="border-0">
+								<i class="fa font-12 fa-moon gradient-yellow color-white rounded-sm"></i>
+								<span>Dark Mode</span>
+								<div class="custom-control ios-switch">
+									<input data-toggle-theme type="checkbox" class="ios-input" id="switch-dark2-mode">
+									<label class="custom-control-label" for="switch-dark2-mode"></label>
+								</div>
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div id="menu-wizard-step-1" class="menu menu-box-left" data-menu-height="cover" data-menu-width="cover">
+            <div class="card card-style bg-transparent shadow-0 mb-0" style="height:100%;">
+                <div class="card-top mt-4">
+                    <div class="d-flex pb-3 mb-n4">
+                        <a href="#" style="width:35px; line-height:35px;" class="me-auto font-600 rounded-l text-center bg-green-dark">1</a>
+                        <a href="#" style="width:35px; line-height:35px;" class="ms-auto font-600 rounded-l text-center bg-gray-dark">2</a>
+                    </div>
+                    <div class="divider position-absolute start-0 end-0 mt-n2" style="z-index:-1;"></div>
+    
+                    <h1 class="pt-4 mt-3">Morning Pass</h1>
+                    <p>
+                        Use this form to request a morning pass.
+                        <br>
+                        <mark class="highlight px-2 bg-red-dark">Only valid on for the day requested.</mark>
+                    </p>
+                    <h5>Name</h5>
+                    <div class="input-style has-borders no-icon validate-field mb-4">
+                        <input type="name" class="form-control validate-name" id="nameInput" placeholder="" oninput="validateName()">
+                        <label for="form1" class="color-highlight disabled">John</label>
+                        <i class="fa fa-times disabled invalid color-red-dark"></i>
+                        <i class="fa fa-check disabled valid color-green-dark"></i>
+                        <em>(required)</em>
+                    </div>
+                    <h5>Date</h5>
+                    <div class="input-style has-borders no-icon validate-field mb-4">
+                        <input type="date" value="2030-12-31" value="2030-12-31" max="2030-01-01" min="2021-01-01" class="form-control validate-text" id="dateInput" placeholder="">
+                        <label for="form1" class="color-highlight">Select Date</label>
+                        <i class="fa fa-check disabled valid me-4 pe-3 font-12 color-green-dark"></i>
+                        <i class="fa fa-check disabled invalid me-4 pe-3 font-12 color-red-dark"></i>
+                        <em>(required)</em>
+                    </div>
+                </div>
+                <div class="card-bottom mb-5 pb-3">
+                    <a href="#" data-menu="menu-wizard-step-2" id="submitButton" class="btn btn-full btn-m rounded-m bg-blue-dark font-700 text-uppercase" disabled >Next Step</a>
+                </div>
+            </div>
+        </div>  
+    
+        <div id="menu-wizard-step-2" class="menu menu-box-left" data-menu-height="cover" data-menu-width="cover">
+            <div class="card card-style bg-transparent shadow-0 mb-0" style="height:100%;">
+                <div class="card-center text-center">
+                    <i class="fa fa-check-circle scale-box color-green-dark fa-5x pb-3"></i>
+                    <h1>Thank you!</h1>
+                    <p class="px-3 mb-5">
+                        We'll get back to you if we need clarifications. Thank you for taking our survay!
+                    </p>
+                </div>
+                <div class="card-bottom mb-5 pb-3">
+                    <a href="#" class="close-menu btn btn-full btn-m rounded-m bg-green-dark font-700 text-uppercase">Awesome!</a>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script type="text/javascript" src="../../scripts/bootstrap.min.js" defer></script>
+<script type="text/javascript" src="../../scripts/custom.js" defer></script>
+<script>
+    function validateName() {
+      const nameInput = document.getElementById('nameInpus');
+      const submitButton = document.getElementById('submitButton');
+      const name = nameInput.value.trim();
+  
+      if (validNames.includes(name)) {
+        nameInput.classList.remove('invalid');
+        nameInput.classList.add('valid');
+        submitButton.disabled = false;
+      } else {
+        nameInput.classList.remove('valid');
+        nameInput.classList.add('invalid');
+        submitButton.disabled = true;
+      }
+    }
+    const dateInput = document.getElementById('dateInput');
+  const today = new Date();
+  const formattedDate = today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+  dateInput.value = formattedDate;
+  </script>
+</body>
