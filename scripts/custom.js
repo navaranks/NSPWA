@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.menu').forEach(el=>{el.style.display='block'})
 
         //Validator
+        var nextButton = document.querySelector('.btn-full');
         var inputField = document.querySelectorAll('input');
         if(inputField.length){
             var mailValidator = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             var numberValidator = /^(0|[1-9]\d*)$/;
             var linkValidator = /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/;
             var textValidator = /[A-Za-z]{2}[A-Za-z]*[ ]?[A-Za-z]*/;
+            var allowedNames = ['John Doe', 'Jane Smith', 'Alice Johnson'];
 
             function valid(el){
                 el.parentElement.querySelectorAll('.valid')[0].classList.remove('disabled');
@@ -106,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 validateField.forEach(el => el.addEventListener('keyup', e => {
                     var getAttribute = el.getAttribute('type');
                     switch(getAttribute){
-                        case 'name': nameValidator.test(el.value) ? valid(el) : invalid(el); break;
+                        case 'name': if (el.value === 'Jannette Basave') {
+                            valid(el); nextButton.removeAttribute('disabled');} else{invalid(el); nextButton.setAttribute('disabled', 'disabled');} break;
                         case 'number': numberValidator.test(el.value) ? valid(el) : invalid(el); break;
                         case 'email': mailValidator.test(el.value) ? valid(el) : invalid(el); break;
                         case 'text': textValidator.test(el.value) ? valid(el) : invalid(el); break;
@@ -114,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         case 'tel': phoneValidator.test(el.value) ? valid(el) : invalid(el); break;
                         case 'password': passwordValidator.test(el.value) ? valid(el) : invalid(el); break;
                     }
-                    if(el.value === ""){unfilled(el);}
+                    if(el.value === ""){unfilled(el); nextButton.setAttribute('disabled', 'disabled');}
                 }));
             }
         }
@@ -1437,38 +1440,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
-        /**
- * Make <picture> <source> elements with media="(prefers-color-scheme:)"
- * respect custom theme preference overrides.
- * Otherwise the `media` preference will only respond to the OS-level setting
- */
-const updateSourceMedia = colorPreference => {
-  const pictures = document.querySelectorAll("picture")
-
-  pictures.forEach(picture => {
-    const sources = picture.querySelectorAll(`
-        source[media*="prefers-color-scheme"], 
-        source[data-media*="prefers-color-scheme"]
-      `)
-
-    sources.forEach(source => {
-      // Preserve the source `media` as a data-attribute
-      // to be able to switch between preferences
-      if (source?.media.includes("prefers-color-scheme")) {
-        source.dataset.media = source.media
-      }
-
-      // If the source element `media` target is the `preference`,
-      // override it to 'all' to show
-      // or set it to 'none' to hide
-      if (source?.dataset.media.includes(colorPreference)) {
-        source.media = "all"
-      } else if (source) {
-        source.media = "none"
-      }
-    })
-  })
-}
+        
         //Import HTML Files
         window.onload = function() {
             var elements = document.getElementsByTagName('*'),
@@ -1525,7 +1497,9 @@ const updateSourceMedia = colorPreference => {
                     
                 }
             }
-        } 
+        }
+        //Form Names
+        
         
     }
 

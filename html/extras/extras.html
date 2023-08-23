@@ -5,7 +5,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>Physics Home</title>
+<title>Navarrete Science Extras</title>
 <link rel="stylesheet" type="text/css" href="../../styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../../styles/style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
@@ -13,10 +13,6 @@
 <link rel="manifest" href="../../_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
 <link rel="apple-touch-icon" sizes="180x180" href="../../app/icons/icon-192x192.png">
 <link rel="icon" href="../../images/icon.png" type="image/png" sizes="32x32">
-<script>
-    // Define an array of valid names
-    const validNames = ['Navarrete',]; // Add more names as needed
-  </script>
 </head>
 
 <body class="theme-light" data-highlight="highlight-sunny" data-gradient="body-default">
@@ -45,7 +41,7 @@
     -->
     <div class="card card-style preload-img" data-src="images/pictures/18w.jpg" data-card-height="130">
         <div class="card-center ms-3">
-            <h1 class="color-white mb-0">Morning Pass</h1>
+            <h1 class="color-white mb-0">Morning Pass Request</h1>
             
         </div>
         <div class="card-center me-3">
@@ -115,32 +111,35 @@
                         <a href="#" style="width:35px; line-height:35px;" class="ms-auto font-600 rounded-l text-center bg-gray-dark">2</a>
                     </div>
                     <div class="divider position-absolute start-0 end-0 mt-n2" style="z-index:-1;"></div>
-    
-                    <h1 class="pt-4 mt-3">Morning Pass</h1>
-                    <p>
-                        Use this form to request a morning pass.
-                        <br>
-                        <mark class="highlight px-2 bg-red-dark">Only valid on for the day requested.</mark>
-                    </p>
-                    <h5>Name</h5>
-                    <div class="input-style has-borders no-icon validate-field mb-4">
-                        <input type="name" class="form-control validate-name" id="nameInput" placeholder="" oninput="validateName()">
-                        <label for="form1" class="color-highlight disabled">John</label>
-                        <i class="fa fa-times disabled invalid color-red-dark"></i>
-                        <i class="fa fa-check disabled valid color-green-dark"></i>
-                        <em>(required)</em>
-                    </div>
-                    <h5>Date</h5>
-                    <div class="input-style has-borders no-icon validate-field mb-4">
-                        <input type="date" value="2030-12-31" value="2030-12-31" max="2030-01-01" min="2021-01-01" class="form-control validate-text" id="dateInput" placeholder="">
-                        <label for="form1" class="color-highlight">Select Date</label>
-                        <i class="fa fa-check disabled valid me-4 pe-3 font-12 color-green-dark"></i>
-                        <i class="fa fa-check disabled invalid me-4 pe-3 font-12 color-red-dark"></i>
-                        <em>(required)</em>
+                    <div class="content">
+                        <h1 class="pt-4 mt-3">Morning Pass</h1>
+                        <p>
+                            Use this form to request a morning pass.
+                            <br>
+                            <mark class="highlight px-2 bg-red-dark">Only valid on for the day requested.</mark>
+                        </p>
+                        
+                        <div class="input-style no-borders  has-icon validate-field mb-4">
+                            <i class="fa fa-user"></i>
+                            <input type="name" class="form-control validate-name bg-transparent" id="form1a" placeholder="Name">
+                            <label for="form1a" class="color-highlight bg-transparent">Name</label>
+                            <i class="fa fa-times disabled invalid bg-transparent color-red-dark"></i>
+                            <i class="fa fa-check disabled valid color-green-dark"></i>
+                            <em>(required)</em>
+                        </div>
+                        
+                        <div class="input-style no-borders no-icon mb-4">
+                            <input type="date" value="2030-12-31" max="2030-01-01" min="2021-01-01" class="form-control validate-text bg-transparent" id="dateInput" placeholder="Phone">
+                            <label for="form6a" class="color-highlight bg-transparent">Select Date</label>
+                            <i class="fa fa-check disabled valid me-4 pe-3 font-12 color-green-dark"></i>
+                            <i class="fa fa-check disabled invalid me-4 pe-3 font-12 color-red-dark"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="card-bottom mb-5 pb-3">
-                    <a href="#" data-menu="menu-wizard-step-2" id="submitButton" class="btn btn-full btn-m rounded-m bg-blue-dark font-700 text-uppercase" disabled >Next Step</a>
+                <div class="card-bottom mb-5 pb-3 ">
+                    <div class="d-grip gap-2" style="display: grid">
+                        <button data-menu="menu-wizard-step-2" type="button" id="nextButton" class=" btn-full font-900 text-uppercase bg-red-dark btn-m rounded-sm" disabled>Next Step</button>
+                    </div>
                 </div>
             </div>
         </div>  
@@ -148,11 +147,11 @@
         <div id="menu-wizard-step-2" class="menu menu-box-left" data-menu-height="cover" data-menu-width="cover">
             <div class="card card-style bg-transparent shadow-0 mb-0" style="height:100%;">
                 <div class="card-center text-center">
-                    <i class="fa fa-check-circle scale-box color-green-dark fa-5x pb-3"></i>
-                    <h1>Thank you!</h1>
-                    <p class="px-3 mb-5">
-                        We'll get back to you if we need clarifications. Thank you for taking our survay!
-                    </p>
+                    <img src="../../images/morning_pass.png" class="img-pass" alt="">
+                    <h1 id="namePlaceholder">"Name"</h1>
+                    <h4 class="px-3 mb-5" id="datePlaceholder">
+                       Valid for "date"
+                    </h4>
                 </div>
                 <div class="card-bottom mb-5 pb-3">
                     <a href="#" class="close-menu btn btn-full btn-m rounded-m bg-green-dark font-700 text-uppercase">Awesome!</a>
@@ -162,26 +161,34 @@
 </div>
 
 <script type="text/javascript" src="../../scripts/bootstrap.min.js" defer></script>
-<script type="text/javascript" src="../../scripts/custom.js" defer></script>
+<script type="text/javascript" src="../../scripts/custom.js" ></script>
 <script>
-    function validateName() {
-      const nameInput = document.getElementById('nameInpus');
-      const submitButton = document.getElementById('submitButton');
-      const name = nameInput.value.trim();
-  
-      if (validNames.includes(name)) {
-        nameInput.classList.remove('invalid');
-        nameInput.classList.add('valid');
-        submitButton.disabled = false;
-      } else {
-        nameInput.classList.remove('valid');
-        nameInput.classList.add('invalid');
-        submitButton.disabled = true;
-      }
-    }
     const dateInput = document.getElementById('dateInput');
-  const today = new Date();
-  const formattedDate = today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
-  dateInput.value = formattedDate;
-  </script>
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    dateInput.value = formattedDate;
+    var nextButton = document.getElementById('nextButton');
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+            var nameInput = document.querySelector('.validate-name');
+            var dateInput = document.getElementById('dateInput');
+            var namePlaceholder = document.getElementById("namePlaceholder");
+            var datePlaceholder = document.getElementById("datePlaceholder");
+            var nextButton = document.querySelector('.btn-full');
+        
+            nextButton.addEventListener("click", function() {
+                var submittedName = nameInput.value;
+                var submittedDate = formatDate(dateInput.value);
+        
+                namePlaceholder.textContent = submittedName;
+                datePlaceholder.textContent = "Valid for " + submittedDate;
+            });
+            function formatDate(inputDate) {
+            var dateObj = new Date(inputDate);
+            var formattedDate = `${(dateObj.getMonth() + 1).toString().padStart(2, '0')}/${dateObj.getDate().toString().padStart(2, '0')}/${dateObj.getFullYear()}`;
+            return formattedDate;
+        } 
+        });
+</script>
 </body>

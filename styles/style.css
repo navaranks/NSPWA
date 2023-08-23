@@ -6774,6 +6774,13 @@ input[type=number] {
   height: auto;
 }
 
+.img-pass {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  transform: translate(-3%,0%);
+  height: 300px;
+}
 .img-table {
   max-width: 65%;
   margin-left: 17.504%;
