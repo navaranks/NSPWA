@@ -1,5 +1,5 @@
 {
-    "version": "0.1.2",
+    "version": "0.1.3",
     "comment": "---Above version must be the same as data-pwa-version",
     "comment": "---data-pwa-version can be found in index.html in the manifest tag",
     "comment": "---if versions are not the same it will cause an update loop",
@@ -7,7 +7,7 @@
     "name" : "Navarrete_Science",
     "scope" : "/",
     "display" : "fullscreen",
-    "start_url" : "/index.html",
+    "start_url" : "index.html",
     "short_name" : "NS",
     "description" : "",
     "orientation" : "portrait",
