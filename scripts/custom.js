@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //Global Variables
     let isPWA = true;  // Enables or disables the service worker and PWA
     let isAJAX = false; // AJAX transitions. Requires local server or server
-    var pwaName = "Sticky"; //Local Storage Names for PWA
+    var pwaName = "Navarrete_Science"; //Local Storage Names for PWA
     var pwaRemind = 1; //Days to re-remind to add to home
     var pwaNoCache = true; //Requires server and HTTPS/SSL. Will clear cache with each visit
 
     //Setting Service Worker Locations scope = folder | location = service worker js location
-    var pwaScope = "https://navarretescience.com";
+    var pwaScope = "https://navarretescience.com/";
     var pwaLocation = "https://navarretescience.com/_service-worker.js";
 
     //Place all your custom Javascript functions and plugin calls below this line
