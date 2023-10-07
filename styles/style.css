@@ -6871,7 +6871,20 @@ ul.drop {
   color: #DA4453 !important;
   text-decoration: underline wavy #DA4453 1px !important;
 }
+/*
+div.schedule.chem .accordion{
+  transform: scaleY(-1);
+}
 
+div.schedule.chem .accordion-btn,
+div.schedule.chem .schedule{
+  transform: scaleY(-1)
+}
+
+div.schedule.chem .accordion .card{
+  flex-direction: column-reverse;
+}
+*/
 .schedule.chem a {
   color: #DA4453 !important;
 }
