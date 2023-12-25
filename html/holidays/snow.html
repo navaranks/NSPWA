@@ -1,0 +1,91 @@
+<style>
+    .particle {
+        left:-30px;
+		right:-30px;
+        height:200%;
+        top:-150px;
+        z-index:120;
+        pointer-events:none;
+        position: fixed;
+    }
+
+    .particle span {
+        display: inline-flex;
+        animation: particles 3s linear 2s 20;
+        position:relative;
+        color: white;
+        filter: drop-shadow(0 0 10px white);	
+    }
+    .particle span:after,
+    .particle span:before {
+        
+        
+        transform: rotate(120deg);
+    }
+    .particle u:before {transform: rotate(240deg);}
+
+    /*main animation*/
+    @-webkit-keyframes particles {
+          0% {-webkit-transform: translate(0, 0) rotate(0deg) scale(1);}
+          100% {-webkit-transform: translate(0,120vh) rotate(180deg) scale(0.6);}
+    }
+
+    /*color of particles
+    .particle i{color:rgb(255, 255, 255);filter: drop-shadow(0 0 10px white);}*/
+    /*setting the interval for particle groups*/
+    .particle span:nth-child(3n + 0) {animation-duration: 10s; animation-iteration-count: 100;}
+    .particle span:nth-child(3n + 1) {animation-duration: 13s; animation-iteration-count: 100;}
+    .particle span:nth-child(3n + 2) {animation-duration: 15s; animation-iteration-count: 100;}
+
+    /* different delays so they don't all start at the same time */
+    .particle span:nth-child(7n + 0) {opacity: 1.0; animation-delay: 0s;}
+    .particle span:nth-child(7n + 1) {opacity: 0.8; animation-delay: 2s;}
+    .particle span:nth-child(7n + 2) {opacity: 0.6; animation-delay: 4s;}
+    .particle span:nth-child(7n + 3) {opacity: 1.0; animation-delay: 6s;}
+    .particle span:nth-child(7n + 4) {opacity: 0.8; animation-delay: 8s;}
+    .particle span:nth-child(7n + 5) {opacity: 0.6; animation-delay: 10s;}
+    .particle span:nth-child(7n + 6) {opacity: 0.7; animation-delay: 12s;}
+</style>
+<div class="particle" style="text-align: center;">
+		<!-- The more items you add the more particles will appear. We recommend not exceeding 80 to 100 elements-->
+		
+		<span><i class="fa fa-snowflake font-35"></i></span>
+		<span><i class="fa fa-snowflake font-40"></i></span>
+		<span><i class="fa fa-snowflake font-35"></i></span>
+		<span><i class="fa fa-snowflake font-30"></i></span>
+		<span><i class="fa fa-snowflake font-25"></i></span>
+		<span><i class="fa fa-snowflake font-20"></i></span>
+		<span><i class="fa fa-snowflake font-15"></i></span>
+		<span><i class="fa fa-snowflake font-10"></i></span>
+		<span><i class="fa fa-snowflake font-15"></i></span>
+		<span><i class="fa fa-snowflake font-20"></i></span>
+		<span><i class="fa fa-snowflake font-25"></i></span>
+		<span><i class="fa fa-snowflake font-30"></i></span>
+		<span><i class="fa fa-snowflake font-35"></i></span>
+		<span><i class="fa fa-snowflake font-40"></i></span>
+		<span><i class="fa fa-snowflake font-35"></i></span>
+		<span><i class="fa fa-snowflake font-30"></i></span>
+		<span><i class="fa fa-snowflake font-25"></i></span>
+		<span><i class="fa fa-snowflake font-20"></i></span>
+		<span><i class="fa fa-snowflake font-15"></i></span>
+		<span><i class="fa fa-snowflake font-10"></i></span>
+		<span><i class="fa fa-snowflake font-15"></i></span>
+		<span><i class="fa fa-snowflake font-20"></i></span>
+		<span><i class="fa fa-snowflake font-25"></i></span>
+		<span><i class="fa fa-snowflake font-30"></i></span>
+		<span><i class="fa fa-snowflake font-35"></i></span>
+		<span><i class="fa fa-snowflake font-40"></i></span>
+		<span><i class="fa fa-snowflake font-35"></i></span>
+		<span><i class="fa fa-snowflake font-30"></i></span>
+		<span><i class="fa fa-snowflake font-25"></i></span>
+		<span><i class="fa fa-snowflake font-20"></i></span>
+		<span><i class="fa fa-snowflake font-15"></i></span>
+		<span><i class="fa fa-snowflake font-10"></i></span>
+		<span><i class="fa fa-snowflake font-15"></i></span>
+		<span><i class="fa fa-snowflake font-20"></i></span>
+		<span><i class="fa fa-snowflake font-25"></i></span>
+		<span><i class="fa fa-snowflake font-30"></i></span>
+		<span><i class="fa fa-snowflake font-35"></i></span>
+
+		
+	</div>
