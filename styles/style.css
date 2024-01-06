@@ -6782,11 +6782,18 @@ input[type=number] {
   height: 300px;
 }
 .img-table {
-  max-width: 65%;
+  /* max-width: 65%;
   margin-left: 17.504%;
   border: 2px solid	transparent;
-	transition: border 0.3s;
+	transition: border 0.3s; */
+  max-width: 100%;
+  
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .img-intro {
   width: 50%;
   max-width: 300px;
@@ -6975,6 +6982,9 @@ ul.drop {
   .chem-header img.chem-card,
   .chem-header img.phys-card {
     max-height: 150px;
+  }
+  .img-table{
+    width: 300px;
   }
 } 
 
