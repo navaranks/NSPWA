@@ -6954,6 +6954,13 @@ ul.drop {
   background-color: rgba(0, 0, 0, 0.05);
   margin-bottom: 30px;
 }
+.img-in {
+  display: none;
+} 
+.img-out {
+  width: 100%;
+  display: block;
+}
 /*
 .nava-logo {
   max-height: 40px;
@@ -6985,6 +6992,12 @@ ul.drop {
   }
   .img-table{
     width: 300px;
+  }
+  .img-out {
+    display: none;
+  }
+  .img-in {
+    display: block;
   }
 } 
 
